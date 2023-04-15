@@ -50,6 +50,40 @@ namespace TravelApp.Pages
             }
         }
 
+        private void FilterBooksButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (FilterDockPanel.Visibility == Visibility.Collapsed)
+            {
+                FilterDockPanel.Visibility = Visibility.Visible;
+                FilterHotelButton.Content = "Скрыть поиск";
+            }
+            else
+            {
+                FilterDockPanel.Visibility = Visibility.Collapsed;
+                FilterHotelButton.Content = "Поиск";
+            }
+        }
+
+        private void ShowDialog(Page Page)
+        {
+            Grid.SetColumnSpan(PageDataGridDockPanel, 1);
+            DialogGridSplitter.Visibility = Visibility.Visible;
+            DialogScrollViewer.Visibility = Visibility.Visible;
+            DialogFrame.Navigate(Page);
+        }
+
+        public void HideDialog()
+        {
+            Grid.SetColumnSpan(PageDataGridDockPanel, 3);
+            DialogGridSplitter.Visibility = Visibility.Hidden;
+            DialogScrollViewer.Visibility = Visibility.Hidden;
+            DialogFrame.Navigate(null);
+            while (DialogFrame.CanGoBack)
+            {
+                DialogFrame.RemoveBackEntry();
+            }
+        }
+
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Core.AppMainWindow.ClosePage();

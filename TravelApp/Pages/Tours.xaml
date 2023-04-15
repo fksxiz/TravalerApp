@@ -27,11 +27,11 @@
 
         <DockPanel Grid.Row="1" Grid.ColumnSpan="3" x:Name="PageDataGridDockPanel">
             <DockPanel DockPanel.Dock="Top">
-                <Button Content="Новый" FontSize="10" Width="60" Margin="5 5 5 5" x:Name="NewHotelButton"/>
-                <Button Content="Копировать" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="CopyHotelButton"/>
-                <Button Content="Изменить" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="ChangeHotelButton"/>
-                <Button Content="Удалить" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="DeleteHotelButton"/>
-                <Button Content="Поиск" FontSize="10" Width="90" Margin="0 5 5 5" x:Name="FilterHotelButton"/>
+                <Button Content="Новый" FontSize="10" Width="60" Margin="5 5 5 0" x:Name="NewTourButton"/>
+                <Button Content="Копировать" FontSize="10" Width="60" Margin="0 5 5 0" x:Name="CopyTourButton"/>
+                <Button Content="Изменить" FontSize="10" Width="60" Margin="0 5 5 0" x:Name="ChangeTourButton"/>
+                <Button Content="Удалить" FontSize="10" Width="60" Margin="0 5 5 0" x:Name="DeleteTourButton"/>
+                <Button Content="Поиск" FontSize="10" Width="90" Margin="0 5 5 0" x:Name="FilterTourButton"/>
                 <Label/>
             </DockPanel>
 

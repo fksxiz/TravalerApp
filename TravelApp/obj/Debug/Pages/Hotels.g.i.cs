@@ -200,6 +200,12 @@ namespace TravelApp.Pages {
             return;
             case 7:
             this.FilterHotelButton = ((System.Windows.Controls.Button)(target));
+            
+            #line 34 "..\..\..\Pages\Hotels.xaml"
+            this.FilterHotelButton.Click += new System.Windows.RoutedEventHandler(this.FilterHotelButton_Click);
+            
+            #line default
+            #line hidden
             return;
             case 8:
             this.FilterDockPanel = ((System.Windows.Controls.DockPanel)(target));
