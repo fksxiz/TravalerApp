@@ -54,5 +54,10 @@ namespace TravelApp.Pages
         {
             Core.AppMainWindow.ClosePage();
         }
+
+        private void HotelsDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

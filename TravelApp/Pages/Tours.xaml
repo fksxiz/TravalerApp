@@ -31,7 +31,8 @@
                 <Button Content="Копировать" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="CopyHotelButton"/>
                 <Button Content="Изменить" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="ChangeHotelButton"/>
                 <Button Content="Удалить" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="DeleteHotelButton"/>
-                <Button Content="Поиск" FontSize="10" Width="90" Margin="10 5 5 5" x:Name="FilterHotelButton"/>
+                <Button Content="Поиск" FontSize="10" Width="90" Margin="0 5 5 5" x:Name="FilterHotelButton"/>
+                <Label/>
             </DockPanel>
 
             <DockPanel DockPanel.Dock="Top" x:Name="FilterDockPanel" Visibility="Collapsed">
