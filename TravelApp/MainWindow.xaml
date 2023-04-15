@@ -1,0 +1,32 @@
+﻿    <Window x:Class="TravelApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130" MinWidth="130" MaxWidth="250"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*" MinWidth="300"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="MenuStackPanel" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="#bae3e8">
+            <Label x:Name="IconLabel" Content="Travaler" Height="65" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" Background="#445c93" FontFamily="Comic Sans MS" Foreground="White"/>
+            <Label x:Name="ReadersLabel" Content="Туры" Margin="0,5,0,-5"/>
+            <Button x:Name="ToursButton" Content="Туры" Margin="5,5,5,0" Click="ToursButton_Click_1"/>
+            <Button x:Name="HotelsButton" Content="Отели" Margin="5,5,5,0" Click="HotelsButton_Click"/>
+            
+            <Label x:Name="ManageLabel" Content="Управление" Margin="0,5,0,-5"/>
+            <Button x:Name="CloseButton" Content="Закрыть" Margin="5,5,5,0"/>
+            <Button x:Name="CloseAllButton" Content="Закрыть все" Margin="5,5,5,0"/>
+            <Button x:Name="NextButton" Content="Вперед" Margin="5,5,5,0"/>
+            <Button x:Name="PreviosButton" Content="Назад" Margin="5,5,5,0"/>
+        </StackPanel>
+        <GridSplitter Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Width="2" HorizontalAlignment="Stretch" Background="#FF00045F"/>
+        <Frame x:Name="RootFrame" Grid.Column="2" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

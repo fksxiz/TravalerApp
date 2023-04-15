@@ -1,0 +1,61 @@
+﻿<Page x:Class="TravelApp.Pages.Hotels"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TravelApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Hotels"
+      Background="#bae3e8">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" MinWidth="250"/>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="250" MinWidth="250"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel DockPanel.Dock="Top" Grid.ColumnSpan="3" Background="#fac716">
+            <Button Content="Закрыть" FontSize="10" Width="60" Margin="5 5 5 5" x:Name="CloseButton" DockPanel.Dock="Right" Click="CloseButton_Click"/>
+            <Label Content="Отели" FontSize="16" FontWeight="Bold"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="1" Grid.ColumnSpan="3" x:Name="PageDataGridDockPanel">
+            <DockPanel DockPanel.Dock="Top">
+                <Button Content="Новый" FontSize="10" Width="60" Margin="5 5 5 5" x:Name="NewHotelButton"/>
+                <Button Content="Копировать" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="CopyHotelButton"/>
+                <Button Content="Изменить" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="ChangeHotelButton"/>
+                <Button Content="Удалить" FontSize="10" Width="60" Margin="0 5 5 5" x:Name="DeleteHotelButton"/>
+                <Button Content="Поиск" FontSize="10" Width="90" Margin="10 5 5 5" x:Name="FilterHotelButton"/>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Top" x:Name="FilterDockPanel" Visibility="Collapsed">
+                <Label Content="Быстрый поиск"/>
+                <TextBox x:Name="filterTextBox" VerticalAlignment="Center" Margin="0 0 5 0" />
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Bottom" Margin="5">
+                
+            </DockPanel>
+
+            <DataGrid x:Name="HotelsDataGrid" Margin="0 5 0 0" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Наименование" Binding="{Binding Path=Name}" Width="10*"/>
+                    <DataGridTextColumn Header="Кол-во звезд" Binding="{Binding Path=CountOfStars}" Width="10*"/>
+                    <DataGridTextColumn Header="Код страны" Binding="{Binding Path=CountryCode}" Width="10*"/>
+                    <DataGridTextColumn Header="Описание" Binding="{Binding Path=Description}" Width="10*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+
+        <GridSplitter x:Name="DialogGridSplitter" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="3" Visibility="Hidden"/>
+        <ScrollViewer x:Name="DialogScrollViewer" Grid.Column="2" Grid.Row="1" Visibility="Hidden" VerticalScrollBarVisibility="Auto">
+            <Frame x:Name="DialogFrame"/>
+        </ScrollViewer>
+    </Grid>
+</Page>
